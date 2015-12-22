@@ -37,6 +37,14 @@ public class zomScript : MonoBehaviour {
             Vector3 startPos = new Vector3(0.0f, 0.0185f, 0.7775f);
             transform.position = startPos;
         }
+
+        if (col.gameObject.tag == "CubeZom")
+        {
+            Vector3 startPos = new Vector3(0.0f, 0.0185f, 0.7775f);
+            transform.position = startPos;
+        }
+
+
         //speed = speed * -1;
         //Destroy(col.gameObject);
     }
