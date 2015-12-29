@@ -55,6 +55,7 @@
      <Compile Include="Assets\Meta\Examples\Camera Feed Example\Scripts\CameraFeedExample.cs" />
      <Compile Include="Assets\Meta\Examples\Markers Example\Scripts\MarkerEventTest.cs" />
      <Compile Include="Assets\MyCubeScript.cs" />
+     <Compile Include="Assets\ZombieSpawn.cs" />
      <Compile Include="Assets\sphereMovement.cs" />
      <Compile Include="Assets\zomScript.cs" />
      <None Include="Assets\MetaPackages\HighlightingSystem\Resources\HighlightingBlur.shader" />
