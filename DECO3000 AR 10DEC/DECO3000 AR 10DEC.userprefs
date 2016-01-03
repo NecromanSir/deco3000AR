@@ -1,0 +1,13 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ZombieSpawn.cs">
+    <Files>
+      <File FileName="Assets\Marco Polo\RandomMatchmaker.cs" Line="5" Column="45" />
+      <File FileName="Assets\ZombieSpawn.cs" Line="23" Column="47" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
