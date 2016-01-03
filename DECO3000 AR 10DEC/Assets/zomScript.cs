@@ -45,7 +45,7 @@ public class zomScript : MonoBehaviour {
         {
             //Vector3 startPos = new Vector3(0.0f, 0.0185f, 0.7775f);
             //transform.position = startPos;
-            GameObject.Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
 
 
