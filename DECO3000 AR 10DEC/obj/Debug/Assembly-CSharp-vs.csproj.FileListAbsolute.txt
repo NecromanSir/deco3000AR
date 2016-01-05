@@ -1,0 +1,17 @@
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\Temp\bin\Debug\Meta.dll
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\Temp\bin\Debug\MetaPackages.dll
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\Temp\bin\Debug\UnityEditor.dll
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\Temp\bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\Temp\bin\Debug\UnityEngine.dll
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\Temp\bin\Debug\Vectrosity.dll
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\Temp\bin\Debug\Unity.SerializationLogic.dll
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\Temp\bin\Debug\Unity.CecilTools.dll
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\obj\Debug\Assembly-CSharp.dll
+C:\Users\IT Guy\Documents\uni related\CSSE3000\DECO3000 AR 10DEC\obj\Debug\Assembly-CSharp.pdb
