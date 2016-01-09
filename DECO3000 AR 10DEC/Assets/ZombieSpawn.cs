@@ -21,6 +21,7 @@ public class ZombieSpawn : MonoBehaviour {
             Physics.IgnoreCollision(spawned_Zom.GetComponent<Collider>(), GetComponent<Collider>());
             //Instantiate(attack_orb, transform.position, transform.rotation);
 			PhotonNetwork.Instantiate("ZombieBro_prefab", spawnPosition, transform.rotation,0);
+            PhotonNetwork.Instantiate("playerPrefab", spawnPosition, transform.rotation, 0);
             count = 0;
         }
     }
