@@ -42,9 +42,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        private Transform ground;
+
         // Use this for initialization
         private void Start()
         {
+            ground = GameObject.Find("Plane").transform;
+            transform.parent = ground.transform;
+
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
             //m_OriginalCameraPosition = m_Camera.transform.localPosition;

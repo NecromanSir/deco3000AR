@@ -9,21 +9,23 @@ public class zomScript : MonoBehaviour {
     int count = 0;
     private Transform target;
     private Transform ground;
-    Vector3 gravity;
+    //Vector3 gravity;
+    public Transform theAnchor;
 
     // Use this for initialization
     void Start () {
         target = GameObject.Find("CubeZom").transform;
         ground = GameObject.Find("Plane").transform;
         //transform.LookAt(target.position);
-        gravity = Physics.gravity;
+        //gravity = Physics.gravity;
+        transform.parent = ground.transform;
     }
    
 	// Update is called once per frame
 	void Update () {
 
         //transform.Translate(Vector2.up * (speed));
-        Physics.gravity = gravity;
+        //Physics.gravity = gravity;
 
         //gravity = ground.position;
         //gravity.x = 1;

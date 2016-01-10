@@ -165,6 +165,7 @@
      <Compile Include="Assets\ZombieSpawn.cs" />
      <Compile Include="Assets\anchorPos.cs" />
      <Compile Include="Assets\sphereMovement.cs" />
+     <Compile Include="Assets\targetCubeScript.cs" />
      <Compile Include="Assets\zomScript.cs" />
      <None Include="Assets\MetaPackages\HighlightingSystem\Resources\HighlightingBlur.shader" />
      <None Include="Assets\MetaPackages\LeanTween\LeanTween-ReadMe.txt" />
