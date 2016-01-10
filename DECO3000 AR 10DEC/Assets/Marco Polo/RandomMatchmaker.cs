@@ -2,10 +2,11 @@
 using System.Collections;
 using Photon;
 
-public class RandomMatchmaker : PunBehaviour {
+public class RandomMatchmaker : PunBehaviour{
 
 	// Use this for initialization
 	void Start () {
+ 
 		PhotonNetwork.ConnectUsingSettings("0.1");
 		// PhotonNetwork.logLevel = PhotonLogLevel.Full;
 	}
@@ -16,6 +17,7 @@ public class RandomMatchmaker : PunBehaviour {
 	}
 
 	public override void OnJoinedLobby() {
+        Debug.Log("OnJoinedLobby");
 		PhotonNetwork.JoinRandomRoom ();
 	}
 	
