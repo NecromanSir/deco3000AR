@@ -14,7 +14,7 @@ public class zomScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        target = GameObject.Find("CubeZom").transform;
+        target = GameObject.Find("playerPrefab").transform;
         ground = GameObject.Find("Plane").transform;
         //transform.LookAt(target.position);
         //gravity = Physics.gravity;
@@ -24,6 +24,8 @@ public class zomScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        target = GameObject.FindWithTag("playerPrefab").transform;
+
         //transform.Translate(Vector2.up * (speed));
         //Physics.gravity = gravity;
 
@@ -32,7 +34,7 @@ public class zomScript : MonoBehaviour {
         //gravity.y = 1;
         //gravity.z = 1
 
-        target = GameObject.Find("CubeZom").transform;
+        //target = GameObject.Find("CubeZom").transform;
 
         //range = Vector2.Distance(transform.position, target.position);
         count++;
@@ -41,6 +43,7 @@ public class zomScript : MonoBehaviour {
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
+        
 
     }
 
