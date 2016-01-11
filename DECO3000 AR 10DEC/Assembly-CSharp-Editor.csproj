@@ -145,6 +145,7 @@
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Meta">
+<<<<<<< HEAD
  <HintPath>D:/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Meta/Meta.dll</HintPath>
  </Reference>
  <Reference Include="Meta-Editor">
@@ -164,6 +165,27 @@
  </Reference>
  <Reference Include="websocket-sharp">
  <HintPath>D:/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+=======
+ <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Meta/Meta.dll</HintPath>
+ </Reference>
+ <Reference Include="Meta-Editor">
+ <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Meta/Editor/Meta-Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="MetaPackages">
+ <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/MetaPackages/MetaPackages.dll</HintPath>
+ </Reference>
+ <Reference Include="Vectrosity">
+ <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/MetaPackages/Vectrosity/Vectrosity.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="Photon3Unity3D">
+ <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ </Reference>
+ <Reference Include="websocket-sharp">
+ <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+>>>>>>> origin/master
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -205,10 +227,13 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{D0433EA6-839E-CF85-D6C8-829ED5DD3090}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+<<<<<<< HEAD
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{7E447E15-7EB2-520D-0043-82DEE808591C}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript.unityproj">
       <Project>{D8353610-D698-2637-A5A7-10DEAFEFCB79}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
+=======
+>>>>>>> origin/master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
