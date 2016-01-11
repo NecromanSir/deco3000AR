@@ -8,6 +8,7 @@ public class ZombieSpawn : MonoBehaviour {
     public Transform spawned_Zom;
     private Transform ground;
     public bool playerEnabled;
+    private bool playerExists;
     // Use this for initialization
     void Start () {
         ground = GameObject.Find("Plane").transform;
@@ -25,7 +26,7 @@ public class ZombieSpawn : MonoBehaviour {
             //Instantiate(attack_orb, transform.position, transform.rotation);
 			PhotonNetwork.Instantiate("ZombieBro_prefab", spawnPosition, transform.rotation,0);
 
-            if (playerEnabled == true)
+            if (playerEnabled == true )
             {
                 PhotonNetwork.Instantiate("playerPrefab", spawnPosition, transform.rotation, 0);
             }
