@@ -25,25 +25,33 @@ public class zomScript : MonoBehaviour {
 	void Update () {
 
         target = GameObject.FindWithTag("playerPrefab").transform;
+       
+        
+        var targetPos = target.position;
+        targetPos.y = transform.position.y;
+        range = Vector2.Distance(transform.position, targetPos);
+        float step = speed * Time.deltaTime;
+        if (range > 0.1f)
+        {
+            transform.LookAt(targetPos, target.up);
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
+        } else
+        {
 
-        //transform.Translate(Vector2.up * (speed));
-        //Physics.gravity = gravity;
-
-        //gravity = ground.position;
-        //gravity.x = 1;
-        //gravity.y = 1;
-        //gravity.z = 1
-
-        //target = GameObject.Find("CubeZom").transform;
-
-        //range = Vector2.Distance(transform.position, target.position);
+            transform.LookAt(targetPos, target.up);
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
+        }
         count++;
 
-        transform.LookAt(target.position, transform.up);
-        float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+       
 
-        
+        if (transform.eulerAngles.z != 0 || transform.eulerAngles.x != 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.LookAt(targetPos, target.up);
+          
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
+        }
 
     }
 
