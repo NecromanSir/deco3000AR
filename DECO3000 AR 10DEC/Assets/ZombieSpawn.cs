@@ -25,7 +25,7 @@ public class ZombieSpawn : MonoBehaviour {
             //Instantiate(attack_orb, transform.position, transform.rotation);
 			PhotonNetwork.Instantiate("ZombieBro_prefab", spawnPosition, transform.rotation,0);
 
-            if (playerEnabled == true)
+            if (playerEnabled == true && GameObject.FindWithTag("playerPrefab") == null)
             {
                 PhotonNetwork.Instantiate("playerPrefab", spawnPosition, transform.rotation, 0);
             }
