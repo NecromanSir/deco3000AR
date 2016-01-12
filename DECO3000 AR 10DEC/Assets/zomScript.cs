@@ -14,7 +14,7 @@ public class zomScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        target = GameObject.Find("playerPrefab").transform;
+        target = GameObject.FindWithTag("playerPrefab").transform;
         ground = GameObject.Find("Plane").transform;
         //transform.LookAt(target.position);
         //gravity = Physics.gravity;
