@@ -9,15 +9,23 @@ public class ZombieSpawn : MonoBehaviour {
     private Transform ground;
     public bool playerEnabled;
     private bool playerExists;
+    public GameObject[] zombieCount;
+
+    public string status = "idle";
+    
+
     // Use this for initialization
     void Start () {
         ground = GameObject.Find("Plane").transform;
         transform.parent = ground.transform;
+        zombieCount = GameObject.FindGameObjectsWithTag("zombieBro");
         
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        zombieCount = GameObject.FindGameObjectsWithTag("zombieBro");
 
         count++;
         if (count == 500)
@@ -25,7 +33,13 @@ public class ZombieSpawn : MonoBehaviour {
             Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
             Physics.IgnoreCollision(spawned_Zom.GetComponent<Collider>(), GetComponent<Collider>());
             //Instantiate(attack_orb, transform.position, transform.rotation);
-			PhotonNetwork.Instantiate("ZombieBro_prefab", spawnPosition, transform.rotation,0);
+
+            if (zombieCount.Length < 5)
+            {
+                PhotonNetwork.Instantiate("ZombieBro_prefab", spawnPosition, transform.rotation, 0);
+            }
+
+			
 
 
 

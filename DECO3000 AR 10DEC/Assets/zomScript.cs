@@ -11,11 +11,14 @@ public class zomScript : MonoBehaviour {
     private Transform ground;
     //Vector3 gravity;
     public Transform theAnchor;
+    public GameObject[] zombieCount;
+   
 
     // Use this for initialization
     void Start () {
         target = GameObject.FindWithTag("playerPrefab").transform;
         ground = GameObject.Find("Plane").transform;
+       
         //transform.LookAt(target.position);
         //gravity = Physics.gravity;
         transform.parent = ground.transform;
@@ -23,6 +26,8 @@ public class zomScript : MonoBehaviour {
    
 	// Update is called once per frame
 	void Update () {
+
+        
 
         target = GameObject.FindWithTag("playerPrefab").transform;
        
