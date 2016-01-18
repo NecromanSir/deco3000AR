@@ -26,9 +26,10 @@ public class PlayerHealth : MonoBehaviour {
     // }
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.tag == "test1")
+        if (hit.gameObject.tag == "zombieBro")
         {
-            TakeDamage(2);
+            TakeDamage(1);
+          
         }
     }
 
