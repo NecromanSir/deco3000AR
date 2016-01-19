@@ -145,25 +145,25 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Meta">
- <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Meta/Meta.dll</HintPath>
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Meta/Meta.dll</HintPath>
  </Reference>
  <Reference Include="Meta-Editor">
- <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Meta/Editor/Meta-Editor.dll</HintPath>
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Meta/Editor/Meta-Editor.dll</HintPath>
  </Reference>
  <Reference Include="MetaPackages">
- <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/MetaPackages/MetaPackages.dll</HintPath>
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/MetaPackages/MetaPackages.dll</HintPath>
  </Reference>
  <Reference Include="Vectrosity">
- <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/MetaPackages/Vectrosity/Vectrosity.dll</HintPath>
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/MetaPackages/Vectrosity/Vectrosity.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
