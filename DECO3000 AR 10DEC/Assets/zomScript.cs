@@ -12,12 +12,13 @@ public class zomScript : MonoBehaviour {
     //Vector3 gravity;
     public Transform theAnchor;
     public GameObject[] zombieCount;
-   
+    private Animator animator;
 
     // Use this for initialization
     void Start () {
         target = GameObject.FindWithTag("playerPrefab").transform;
         ground = GameObject.Find("Plane").transform;
+        animator = GetComponent<Animator>();
        
         //transform.LookAt(target.position);
         //gravity = Physics.gravity;
@@ -30,21 +31,25 @@ public class zomScript : MonoBehaviour {
         
 
         target = GameObject.FindWithTag("playerPrefab").transform;
-       
-        
+
+        float distance = Vector3.Distance(transform.position, target.transform.position);
         var targetPos = target.position;
         targetPos.y = transform.position.y;
-        range = Vector2.Distance(transform.position, targetPos);
+       
         float step = speed * Time.deltaTime;
-        if (range > 0.1f)
+
+
+        if (distance < 1.0f)
         {
             transform.LookAt(targetPos, target.up);
             transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
+            animator.SetBool("isWalking", true);
         } else
+            animator.SetBool("isWalking", false);
         {
 
-            transform.LookAt(targetPos, target.up);
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
+            //transform.LookAt(targetPos, target.up);
+            //transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
         }
         count++;
 
@@ -55,7 +60,7 @@ public class zomScript : MonoBehaviour {
             transform.rotation = Quaternion.Euler(0, 0, 0);
             transform.LookAt(targetPos, target.up);
           
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
+            //transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
         }
 
     }
