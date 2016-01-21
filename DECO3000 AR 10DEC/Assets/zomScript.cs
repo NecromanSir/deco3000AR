@@ -14,13 +14,15 @@ public class zomScript : MonoBehaviour {
     private int timeLeft;
     private bool doneSpawn;
     private Vector3 lastTargetPos;
+    private bool playerPresent = false;
 
     // Use this for initialization
     void Start () {
-        target = GameObject.FindWithTag("playerPrefab").transform;
+        //target = GameObject.FindWithTag("playerPrefab").transform;
         ground = GameObject.Find("Plane").transform;
-        animator = GetComponent<Animator>();
         transform.parent = ground.transform;
+        animator = GetComponent<Animator>();
+        
         zomState = "spawned";
         doneSpawn = false;
         timeLeft = 100;
@@ -28,7 +30,16 @@ public class zomScript : MonoBehaviour {
    
 	// Update is called once per frame
 	void Update () {
-        target = GameObject.FindWithTag("playerPrefab").transform;
+
+        if (GameObject.FindGameObjectsWithTag("playerPrefab").Length > 0) {
+            playerPresent = true;
+            target = GameObject.FindWithTag("playerPrefab").transform;
+        } else
+        {
+            target = GameObject.FindWithTag("CubeZom").transform;
+            playerPresent = false;
+        }
+        
         float distance = Vector3.Distance(transform.position, target.transform.position);
         var targetPos = target.position;
         targetPos.y = transform.position.y;
