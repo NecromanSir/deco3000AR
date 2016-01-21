@@ -13,6 +13,7 @@ public class zomScript : MonoBehaviour {
     private string zomState;
     private int timeLeft;
     private bool doneSpawn;
+    private Vector3 lastTargetPos;
 
     // Use this for initialization
     void Start () {
@@ -43,6 +44,7 @@ public class zomScript : MonoBehaviour {
             }  else
             {
                 doneSpawn = true;
+                zomState = "ready";
                 animator.SetBool("isWalking", false);
             }
             //doneSpawn = true;
@@ -52,13 +54,32 @@ public class zomScript : MonoBehaviour {
         if (doneSpawn == true) {
             if (distance < 1.0f)
             {
+                zomState = "pursuit";
                 transform.LookAt(targetPos, target.up);
                 transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
                 animator.SetBool("isWalking", true);
             }
-            else
-            if (animator)
-                animator.SetBool("isWalking", false);
+            else if (distance >= 1.0f && zomState.Equals("pursuit"))
+            {
+                zomState = "lost";
+                timeLeft = 1000;
+                animator.SetBool("isWalking", true);
+                lastTargetPos = target.transform.position;
+            }
+            else if(zomState.Equals("lost")) {
+                if (timeLeft > 0)
+                {
+                    timeLeft--;
+                    //transform.LookAt(lastTargetPos);
+                    transform.position = Vector3.MoveTowards(transform.position, lastTargetPos, step);
+                }
+                else
+                {
+                    zomState = "idle";
+                    animator.SetBool("isWalking", false);
+                }
+            }
+                
 
             if (transform.eulerAngles.z != 0 || transform.eulerAngles.x != 0)
             {
