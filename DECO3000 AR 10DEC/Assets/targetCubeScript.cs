@@ -17,11 +17,11 @@ public class targetCubeScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         count++;
-
+        transform.parent = ground.transform;
         //if (count == 15)
         //{
         //    Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
         //    PhotonNetwork.Instantiate("playerPrefab", spawnPosition, transform.rotation, 0);
         //}
-	}
+    }
 }

@@ -13,13 +13,16 @@ public class zomScript : MonoBehaviour {
     private string zomState;
     private int timeLeft;
     private bool doneSpawn;
+    private Vector3 lastTargetPos;
+    private bool playerPresent = false;
 
     // Use this for initialization
     void Start () {
-        target = GameObject.FindWithTag("playerPrefab").transform;
+        //target = GameObject.FindWithTag("playerPrefab").transform;
         ground = GameObject.Find("Plane").transform;
-        animator = GetComponent<Animator>();
         transform.parent = ground.transform;
+        animator = GetComponent<Animator>();
+        
         zomState = "spawned";
         doneSpawn = false;
         timeLeft = 100;
@@ -27,7 +30,16 @@ public class zomScript : MonoBehaviour {
    
 	// Update is called once per frame
 	void Update () {
-        target = GameObject.FindWithTag("playerPrefab").transform;
+
+        if (GameObject.FindGameObjectsWithTag("playerPrefab").Length > 0) {
+            playerPresent = true;
+            target = GameObject.FindWithTag("playerPrefab").transform;
+        } else
+        {
+            target = GameObject.FindWithTag("CubeZom").transform;
+            playerPresent = false;
+        }
+        
         float distance = Vector3.Distance(transform.position, target.transform.position);
         var targetPos = target.position;
         targetPos.y = transform.position.y;
@@ -43,6 +55,7 @@ public class zomScript : MonoBehaviour {
             }  else
             {
                 doneSpawn = true;
+                zomState = "ready";
                 animator.SetBool("isWalking", false);
             }
             //doneSpawn = true;
@@ -52,13 +65,32 @@ public class zomScript : MonoBehaviour {
         if (doneSpawn == true) {
             if (distance < 1.0f)
             {
+                zomState = "pursuit";
                 transform.LookAt(targetPos, target.up);
                 transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
                 animator.SetBool("isWalking", true);
             }
-            else
-            if (animator)
-                animator.SetBool("isWalking", false);
+            else if (distance >= 1.0f && zomState.Equals("pursuit"))
+            {
+                zomState = "lost";
+                timeLeft = 1000;
+                animator.SetBool("isWalking", true);
+                lastTargetPos = target.transform.position;
+            }
+            else if(zomState.Equals("lost")) {
+                if (timeLeft > 0)
+                {
+                    timeLeft--;
+                    //transform.LookAt(lastTargetPos);
+                    transform.position = Vector3.MoveTowards(transform.position, lastTargetPos, step);
+                }
+                else
+                {
+                    zomState = "idle";
+                    animator.SetBool("isWalking", false);
+                }
+            }
+                
 
             if (transform.eulerAngles.z != 0 || transform.eulerAngles.x != 0)
             {
