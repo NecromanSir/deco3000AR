@@ -276,35 +276,19 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Meta">
-<<<<<<< HEAD
- <HintPath>C:/Users/ixd/Documents/deco3000AR/DECO3000 AR 10DEC/Assets/Meta/Meta.dll</HintPath>
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Meta/Meta.dll</HintPath>
  </Reference>
  <Reference Include="MetaPackages">
- <HintPath>C:/Users/ixd/Documents/deco3000AR/DECO3000 AR 10DEC/Assets/MetaPackages/MetaPackages.dll</HintPath>
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/MetaPackages/MetaPackages.dll</HintPath>
  </Reference>
  <Reference Include="Vectrosity">
- <HintPath>C:/Users/ixd/Documents/deco3000AR/DECO3000 AR 10DEC/Assets/MetaPackages/Vectrosity/Vectrosity.dll</HintPath>
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/MetaPackages/Vectrosity/Vectrosity.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/ixd/Documents/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>C:/Users/ixd/Documents/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
-=======
- <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Meta/Meta.dll</HintPath>
- </Reference>
- <Reference Include="MetaPackages">
- <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/MetaPackages/MetaPackages.dll</HintPath>
- </Reference>
- <Reference Include="Vectrosity">
- <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/MetaPackages/Vectrosity/Vectrosity.dll</HintPath>
- </Reference>
- <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/Photon3Unity3D.dll</HintPath>
- </Reference>
- <Reference Include="websocket-sharp">
- <HintPath>C:/Users/Dwayne/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
->>>>>>> c43c5dc4febc6956e0110cffd93b5d5a0581af01
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
