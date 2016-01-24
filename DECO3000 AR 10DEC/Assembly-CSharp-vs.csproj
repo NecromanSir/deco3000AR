@@ -197,6 +197,7 @@
      <Compile Include="Assets\tree1.cs" />
      <Compile Include="Assets\tree2.cs" />
      <Compile Include="Assets\zomScript.cs" />
+     <Compile Include="Assets\zombieSpawnCrawler.cs" />
      <None Include="Assets\Rocks Pack\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Rocks Pack\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Rocks Pack\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
@@ -279,17 +280,17 @@
  <Reference Include="Meta">
  <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Meta/Meta.dll</HintPath>
  </Reference>
+ <Reference Include="MetaPackages">
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Photon Unity Networking/MetaPackages/MetaPackages.dll</HintPath>
+ </Reference>
+ <Reference Include="Vectrosity">
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Photon Unity Networking/MetaPackages/Vectrosity/Vectrosity.dll</HintPath>
+ </Reference>
  <Reference Include="Photon3Unity3D">
  <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
  <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
- </Reference>
- <Reference Include="Vectrosity">
- <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Photon Unity Networking/MetaPackages/Vectrosity/Vectrosity.dll</HintPath>
- </Reference>
- <Reference Include="MetaPackages">
- <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Photon Unity Networking/MetaPackages/MetaPackages.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

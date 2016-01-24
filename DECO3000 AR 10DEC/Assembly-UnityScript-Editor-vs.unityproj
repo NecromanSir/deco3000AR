@@ -147,6 +147,12 @@
  <Reference Include="Newtonsoft.Json">
  <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
  </Reference>
+ <Reference Include="MetaPackages">
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Photon Unity Networking/MetaPackages/MetaPackages.dll</HintPath>
+ </Reference>
+ <Reference Include="Vectrosity">
+ <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Photon Unity Networking/MetaPackages/Vectrosity/Vectrosity.dll</HintPath>
+ </Reference>
  <Reference Include="Photon3Unity3D">
  <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
@@ -182,12 +188,6 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/macstandalonesupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="Vectrosity">
- <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Photon Unity Networking/MetaPackages/Vectrosity/Vectrosity.dll</HintPath>
- </Reference>
- <Reference Include="MetaPackages">
- <HintPath>C:/Users/IT Guy/Documents/GitHub/deco3000AR/DECO3000 AR 10DEC/Assets/Photon Unity Networking/MetaPackages/MetaPackages.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

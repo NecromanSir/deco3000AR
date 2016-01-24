@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class playerSpawn : MonoBehaviour
+public class zombieSpawnCrawler : MonoBehaviour
 {
 
     int count = 0;
@@ -34,13 +34,13 @@ public class playerSpawn : MonoBehaviour
         if (count == 500)
         {
             Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
-            //Physics.IgnoreCollision(spawned_Zom.GetComponent<Collider>(), GetComponent<Collider>());
+            Physics.IgnoreCollision(spawned_Zom.GetComponent<Collider>(), GetComponent<Collider>());
             //Instantiate(attack_orb, transform.position, transform.rotation);
 
-            //if (zombieCount.Length < 5)
-            //{
-            //    PhotonNetwork.Instantiate("ZombieBro_prefab", spawnPosition, transform.rotation, 0);
-            //}
+            if (zombieCount.Length < 5)
+            {
+                PhotonNetwork.Instantiate("ZombieBro_prefab_crawler", spawnPosition, transform.rotation, 0);
+            }
 
 
 
