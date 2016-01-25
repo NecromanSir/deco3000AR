@@ -21,8 +21,8 @@ public class zomScript : MonoBehaviour {
         //target = GameObject.FindWithTag("playerPrefab").transform;
         ground = GameObject.Find("Plane").transform;
         transform.parent = ground.transform;
-        //animator = GetComponent<Animator>();
-        
+        animator = GetComponent<Animator>();
+
         zomState = "spawned";
         doneSpawn = false;
         timeLeft = 100;
@@ -51,15 +51,15 @@ public class zomScript : MonoBehaviour {
             {
                 timeLeft--;
                 transform.position += (Vector3.forward * 0.001f);
-                //animator.SetBool("isWalking", true);
+                animator.SetBool("isWalking", true);
             }  else
             {
                 doneSpawn = true;
                 zomState = "ready";
-                //animator.SetBool("isWalking", false);
+                animator.SetBool("isWalking", false);
             }
             //doneSpawn = true;
-            //animator.SetBool("isWalking", false);
+            animator.SetBool("isWalking", false);
         }
 
         if (doneSpawn == true) {
@@ -68,13 +68,13 @@ public class zomScript : MonoBehaviour {
                 zomState = "pursuit";
                 transform.LookAt(targetPos, target.up);
                 transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
-                //animator.SetBool("isWalking", true);
+                animator.SetBool("isWalking", true);
             }
             else if (distance >= 1.0f && zomState.Equals("pursuit"))
             {
                 zomState = "lost";
                 timeLeft = 1000;
-                //animator.SetBool("isWalking", true);
+                animator.SetBool("isWalking", true);
                 lastTargetPos = target.transform.position;
             }
             else if(zomState.Equals("lost")) {
@@ -87,7 +87,7 @@ public class zomScript : MonoBehaviour {
                 else
                 {
                     zomState = "idle";
-                    //animator.SetBool("isWalking", false);
+                    animator.SetBool("isWalking", false);
                 }
             }
                 

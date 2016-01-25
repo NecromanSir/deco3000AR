@@ -196,7 +196,9 @@
      <Compile Include="Assets\targetCubeScript.cs" />
      <Compile Include="Assets\tree1.cs" />
      <Compile Include="Assets\tree2.cs" />
+     <Compile Include="Assets\zomCrawlerScript.cs" />
      <Compile Include="Assets\zomScript.cs" />
+     <Compile Include="Assets\zombieSpawn2.cs" />
      <Compile Include="Assets\zombieSpawnCrawler.cs" />
      <None Include="Assets\Rocks Pack\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Rocks Pack\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
