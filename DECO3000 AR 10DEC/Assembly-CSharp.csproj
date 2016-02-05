@@ -185,6 +185,7 @@
      <Compile Include="Assets\fence2.cs" />
      <Compile Include="Assets\fence3.cs" />
      <Compile Include="Assets\fence4.cs" />
+     <Compile Include="Assets\necromancerScript.cs" />
      <Compile Include="Assets\playerSpawn.cs" />
      <Compile Include="Assets\post1.cs" />
      <Compile Include="Assets\post2.cs" />
