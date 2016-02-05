@@ -6,11 +6,13 @@ public class door_jam : MonoBehaviour {
     private Transform ground;
     private Transform target;
     private Animation animator;
+    private GameObject theDoor;
     private bool playerPresent = false;
 
     // Use this for initialization
     void Start () {
         ground = GameObject.Find("Plane").transform;
+        theDoor = GameObject.Find("door");
         transform.parent = ground.transform;
 
         animator = GetComponent<Animation>();
@@ -19,10 +21,10 @@ public class door_jam : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (GameObject.FindGameObjectsWithTag("playerPrefab").Length > 0)
+        if (GameObject.FindGameObjectsWithTag("sedanPrefab").Length > 0)
         {
             playerPresent = true;
-            target = GameObject.FindWithTag("playerPrefab").transform;
+            target = GameObject.FindWithTag("sedanPrefab").transform;
         }
         else
         {
@@ -36,26 +38,30 @@ public class door_jam : MonoBehaviour {
         {
             //animator.Play("open");
             //animator.SetBool("keyNear", true);
+            theDoor.SetActive(false);
         } else
         {
-            animator.Play("close");
+            //animator.Play("close");
+            theDoor.SetActive(true);
             //animator.SetBool("keyNear", false);
         }
     }
 
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.tag == "playerPrefab")
-        {
-            animator.Play("open");
-        }
-    }
+    //void OnCollisionEnter(Collision col)
+    //{
+    //    if (col.gameObject.tag == "playerPrefab")
+    //    {
+    //        //animator.Play("open");
+    //        gameObject.SetActive(false);
+    //    }
+    //}
 
-    void OnCollisionExit(Collision col)
-    {
-        if (col.gameObject.tag == "playerPrefab")
-        {
-            animator.Play("close");
-        }
-    }
+    //void OnCollisionExit(Collision col)
+    //{
+    //    if (col.gameObject.tag == "playerPrefab")
+    //    {
+    //        //animator.Play("close");
+    //        gameObject.SetActive(true);
+    //    }
+    //}
 }

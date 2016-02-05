@@ -34,7 +34,7 @@ public class zombieSpawnCrawler : MonoBehaviour
         if (count == 500)
         {
             Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
-            Physics.IgnoreCollision(spawned_Zom.GetComponent<Collider>(), GetComponent<Collider>());
+            //Physics.IgnoreCollision(spawned_Zom.GetComponent<Collider>(), GetComponent<Collider>());
             //Instantiate(attack_orb, transform.position, transform.rotation);
 
             if (zombieCount.Length < 5)
