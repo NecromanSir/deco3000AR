@@ -36,14 +36,13 @@ public class door_jam : MonoBehaviour {
 
         if (distance < 1.0f)
         {
-            //animator.Play("open");
-            //animator.SetBool("keyNear", true);
+          
             theDoor.SetActive(false);
         } else
         {
-            //animator.Play("close");
+            
             theDoor.SetActive(true);
-            //animator.SetBool("keyNear", false);
+    
         }
     }
 
