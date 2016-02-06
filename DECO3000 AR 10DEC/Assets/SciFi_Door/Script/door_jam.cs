@@ -7,6 +7,9 @@ public class door_jam : MonoBehaviour {
     private Transform target;
     private Animation animator;
     private GameObject theDoor;
+    private Renderer renderer;
+    private Collider collider;
+
     private bool playerPresent = false;
 
     // Use this for initialization
@@ -15,16 +18,17 @@ public class door_jam : MonoBehaviour {
         theDoor = GameObject.Find("door");
         transform.parent = ground.transform;
 
-        animator = GetComponent<Animation>();
+        renderer = GetComponent<Renderer>();
+        collider = GetComponent<Collider>();
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (GameObject.FindGameObjectsWithTag("sedanPrefab").Length > 0)
+        if (GameObject.FindGameObjectsWithTag("playerPrefab").Length > 0)
         {
             playerPresent = true;
-            target = GameObject.FindWithTag("sedanPrefab").transform;
+            target = GameObject.FindWithTag("playerPrefab").transform;
         }
         else
         {
@@ -36,13 +40,17 @@ public class door_jam : MonoBehaviour {
 
         if (distance < 1.0f)
         {
-          
-            theDoor.SetActive(false);
+
+            //gameObject.SetActive(false);
+            renderer.enabled = false;
+            collider.enabled = false;
         } else
         {
-            
-            theDoor.SetActive(true);
-    
+
+            //gameObject.SetActive(true);
+            renderer.enabled = true;
+            collider.enabled = true;
+
         }
     }
 

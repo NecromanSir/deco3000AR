@@ -12,6 +12,7 @@ public class necromancerScript : MonoBehaviour {
     void Start () {
         ground = GameObject.Find("Plane").transform;
         transform.parent = ground.transform;
+        
     }
 	
 	// Update is called once per frame
