@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class door_jam : MonoBehaviour {
+public class door_jam : MonoBehaviour
+{
 
     private Transform ground;
     private Transform target;
@@ -9,21 +10,30 @@ public class door_jam : MonoBehaviour {
     private GameObject theDoor;
     private Renderer renderer;
     private Collider collider;
+    public string doorState;
+    private int count = 0;
 
     private bool playerPresent = false;
+    public bool doorEnabled;
 
     // Use this for initialization
-    void Start () {
-        ground = GameObject.Find("Plane").transform;
+    void Start()
+    {
+        //ground = GameObject.Find("Plane").transform;
         theDoor = GameObject.Find("door");
-        transform.parent = ground.transform;
-
+        //transform.parent = ground.transform;
+        updateDoorEnabled(true);
         renderer = GetComponent<Renderer>();
         collider = GetComponent<Collider>();
+        doorState = "ready";
+        //Physics.IgnoreLayerCollision(8, 9, true);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
+
+
 
         if (GameObject.FindGameObjectsWithTag("playerPrefab").Length > 0)
         {
@@ -36,39 +46,77 @@ public class door_jam : MonoBehaviour {
             playerPresent = false;
         }
 
+        if (getDoorEnabled() == false)
+        {
+            Physics.IgnoreCollision(transform.GetComponent<Collider>(), target.GetComponent<Collider>());
+            Physics.IgnoreLayerCollision(8, 9, true);
+        }
+        else if (getDoorEnabled() == true)
+        {
+            Physics.IgnoreCollision(transform.GetComponent<Collider>(), target.GetComponent<Collider>(), false);
+            Physics.IgnoreLayerCollision(8, 9, false);
+        }
+
+        Physics.IgnoreLayerCollision(8, 9, true);
+
         float distance = Vector3.Distance(transform.position, target.transform.position);
+        count++;
 
-        if (distance < 1.0f)
+        if (doorState == "recharging" && count > 100)
+        {
+            doorState = "ready";
+        }
+
+        if (distance < 1.0f && doorState == "ready")
         {
 
-            //gameObject.SetActive(false);
             renderer.enabled = false;
-            collider.enabled = false;
-        } else
-        {
+            updateDoorEnabled(false);
+            //collider.enabled = false;
+            count = 0;
+            doorState = "off";
 
-            //gameObject.SetActive(true);
-            renderer.enabled = true;
-            collider.enabled = true;
+        }
+        else if (doorState == "off")
+        {
+            count++;
+
+            if (count > 500f)
+            {
+                doorState = "recharging";
+                renderer.enabled = true;
+                updateDoorEnabled(true);
+                //collider.enabled = true;
+                count = 0;
+            }
+
 
         }
     }
 
     //void OnCollisionEnter(Collision col)
     //{
-    //    if (col.gameObject.tag == "playerPrefab")
+    //    if (getDoorEnabled() == false)
     //    {
-    //        //animator.Play("open");
-    //        gameObject.SetActive(false);
+    //        Debug.Log("False");
+    //    } else
+    //    {
+    //        Debug.Log("True");
     //    }
+    //    if (getDoorEnabled() == false)
+    //    {
+    //        Physics.IgnoreCollision(GetComponent<Collider>(), GetComponent<Collider>());
+    //    }
+
     //}
 
-    //void OnCollisionExit(Collision col)
-    //{
-    //    if (col.gameObject.tag == "playerPrefab")
-    //    {
-    //        //animator.Play("close");
-    //        gameObject.SetActive(true);
-    //    }
-    //}
+    public bool getDoorEnabled()
+    {
+        return doorEnabled;
+    }
+
+    public void updateDoorEnabled(bool passBool)
+    {
+        doorEnabled = passBool;
+    }
 }
